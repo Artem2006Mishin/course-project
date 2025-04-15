@@ -49,7 +49,6 @@ void Square::hide()
 void Square::move(int newX, int newY)
 {
     hide();
-    x = newX;
-    y = newY;
+    setPosition(newX, newY);
     show();
 }

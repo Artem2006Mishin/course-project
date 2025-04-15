@@ -15,20 +15,21 @@ void FiguresList::addFigure(Figure* figure)
 void FiguresList::showAll()
 {
 	for (auto figure : figures) {
-		if (figure) figure->show();
+		figure->show();
 	}
 }
 
 void FiguresList::hideAll()
 {
 	for (auto figure : figures) {
-		if (figure) figure->hide();
+		figure->hide();
 	}
 }
 
 void FiguresList::clear()
 {
-	for (auto figure : figures) {
-		//delete figure;
-	}
+	//for (auto figure : figures) {
+	//	delete figure;
+	//}
+	figures.clear();
 }

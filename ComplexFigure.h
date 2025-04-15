@@ -11,7 +11,7 @@ private:
 	Circle* circle;
 	Square* square;
 public:
-	ComplexFigure(int x, int y, int r);
+	ComplexFigure(Circle* circle, Square* square);
 	~ComplexFigure();
 
 	void show() override;

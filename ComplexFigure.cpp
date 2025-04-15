@@ -1,9 +1,17 @@
 #include "ComplexFigure.h"
 
-ComplexFigure::ComplexFigure(int x, int y, int r) : Figure(x, y, r)
+ComplexFigure::ComplexFigure(Circle* circle, Square* square)
 {
-    circle = new Circle(x, y, radius);
-    square = new Square(x, y, radius);
+    if (circle->getX() == square->getX() &&
+        circle->getY() == square->getY() &&
+        circle->getRadius() == square->getRadius())
+    {
+        this->circle = circle;
+        this->square = square;
+    }
+    else {
+        throw std::invalid_argument("Значения должны быть одинаковыми");
+    }
 }
 
 ComplexFigure::~ComplexFigure()
