@@ -8,10 +8,11 @@ protected:
 	int x, y, radius;
 	HWND hwnd;
 	HDC hdc;
+	COLORREF color;
 
 	void setPosition(int x, int y);
 public:
-	Figure(int x, int y, int radius);
+	Figure(int x, int y, int radius, COLORREF color);
 	Figure();
 	virtual ~Figure();
 

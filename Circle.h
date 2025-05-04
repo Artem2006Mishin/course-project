@@ -6,7 +6,7 @@
 
 class Circle : public Figure {
 public:
-	Circle(int x, int y, int r);
+	Circle(int x, int y, int r, COLORREF c);
 	~Circle() override = default;
 
 	void show() override;

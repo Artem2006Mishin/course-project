@@ -5,8 +5,10 @@
 #include "Figure.h"
 
 class Square : public Figure {
+private:
+	COLORREF colorBrush;
 public:
-	Square(int x, int y, int r);
+	Square(int x, int y, int r, COLORREF c, COLORREF cb);
 	~Square() override = default;
 
 	void show() override;

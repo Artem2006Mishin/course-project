@@ -1,6 +1,9 @@
 #include "Square.h"
 
-Square::Square(int x, int y, int r) : Figure(x, y, r) {}
+Square::Square(int x, int y, int r, COLORREF c, COLORREF cb) : Figure(x, y, r, c) 
+{
+    colorBrush = cb;
+}
 
 void Square::show()
 {
@@ -10,8 +13,8 @@ void Square::show()
 	vertices[2] = { x, y + radius };
 	vertices[3] = { x - radius, y };
 
-    HPEN hPen = CreatePen(PS_SOLID, 2, RGB(0, 0, 0));
-    HBRUSH hBrush = CreateSolidBrush(RGB(137, 172, 118));
+    HPEN hPen = CreatePen(PS_SOLID, 2, color);
+    HBRUSH hBrush = CreateSolidBrush(colorBrush);
 
     HGDIOBJ oldPen = SelectObject(hdc, hPen);
     HGDIOBJ oldBrush = SelectObject(hdc, hBrush);
