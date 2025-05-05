@@ -6,7 +6,7 @@
 #include "FigureList.h"
 
 using namespace std;
-
+// ВНЕС ИЗМЕНЕНИЕ
 int main() {
     setlocale(LC_ALL, "RU");
     system("color F0");
