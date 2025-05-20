@@ -24,6 +24,9 @@ void Circle::hide()
 
 void Circle::move(int newX, int newY)
 {
+	if (newX <= 0 || newY <= 0) {
+		throw std::invalid_argument("Попытка выхода за границы!");
+	}
 	hide();
 	setPosition(newX, newY);
 	show();

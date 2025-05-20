@@ -14,7 +14,7 @@ int main() {
     try {
         COLORREF colorBrush = RGB(137, 172, 118);
         COLORREF color = RGB(0, 0, 0);
-        Figure* circle = new Circle(100, 200, 80, color);
+        Figure* circle = new Circle(1000, 20000, 80, color);
         Figure* square = new Square(100, 200, 80, color, colorBrush);
         Figure* complexFig = new ComplexFigure((Circle*)circle, (Square*)square);
 

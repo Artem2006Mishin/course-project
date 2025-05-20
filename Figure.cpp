@@ -18,6 +18,9 @@ Figure::Figure(int x, int y, int radius, COLORREF color) : Figure()
 	if (radius <= 0) {
 		throw std::invalid_argument("Радиус должен быть положительным");
 	}
+	if (x <= 0 || y <= 0) {
+		throw std::invalid_argument("Координаты должны быть положительными");
+	}
 }
 
 Figure::~Figure()

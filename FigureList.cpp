@@ -28,8 +28,5 @@ void FiguresList::hideAll()
 
 void FiguresList::clear()
 {
-	//for (auto figure : figures) {
-	//	delete figure;
-	//}
 	figures.clear();
 }
